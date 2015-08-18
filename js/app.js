@@ -1,6 +1,6 @@
 var app = angular.module('omdbApp', ['ngRoute']);
 
-app.config(function ($routeProvider) {
+app.config(['$routeProvider', function ($routeProvider) {
   $routeProvider
     .when('/', {
       templateUrl: 'partials/home',
@@ -11,4 +11,4 @@ app.config(function ($routeProvider) {
       controller: 'ShowController'
     })
     .otherwise({redirectTo: '/'});
-})
+}])
